@@ -1,6 +1,6 @@
 
 //au chargement de la page, le jeu se lance pour 5 parties
-window.onload = shifumi(155)
+window.onload = shifumi(5)
 
 
 // fonction appelée lors du start
