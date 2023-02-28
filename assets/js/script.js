@@ -14,7 +14,7 @@ function shifumi(nbDeParties) {
 function gameOver() {
     document.querySelector('.selector').style.display = `none`;
     document.querySelector('.fist').style.display = `none`;
-    document.querySelector('.stats-hidden').style.display = `block`
+    document.querySelector('#statistics').style.display = `flex`
     document.querySelector('.round').style.display = `none`;
     //document.querySelector('#score-tableau').display='block';
 }
@@ -97,6 +97,9 @@ async function startShiFuMi(displayTimer, nbDeParties) {
         console.log(`le console log de playerString est ${playerString}`)
         statsComputer = Math.round(100 * scoreComputer / nbPartiesPlayed);
         statsPlayer = Math.round(100 * scorePlayer / nbPartiesPlayed);
+        writeOneStringHTML(`${statsComputer} %`, 'p.computer-stats');
+        writeOneStringHTML(`${statsPlayer} %`, 'p.player-stats');
+        
 
         //console.log(`le console log de playerString est  ${playerString}`);
         console.log(`Computer : ${computerString} VS Player : ${playerString}`);

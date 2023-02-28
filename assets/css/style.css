@@ -220,7 +220,7 @@ body {
 
 #statistics {
     font-family: 'Daydreamthin', sans-serif;
-    display: flex;
+    display: none;
     justify-content: space-around;
     font-size: 40px;
     color: #063c76;
