@@ -72,6 +72,7 @@ async function startShiFuMi(displayTimer, nbDeParties) {
         playerString = readMyChoice();
         player = convertChoiceToNumber(playerString);
         // player et computer contiennent 0, 1, 2, ou 3
+        console.log(`le console log de battle est ${battle(computer, player, displayTimer)}`);
         switch (battle(computer, player, displayTimer)) {
             case 'computer':
                 scoreComputer++;
@@ -81,8 +82,9 @@ async function startShiFuMi(displayTimer, nbDeParties) {
                 scorePlayer++;
                 writeOneStringHTML(scorePlayer, '#right-score p');
                 break;
-            default:
-            //return 'nothing';
+            case 'égalité':
+                nbPartiesPlayed--;
+                nbDeParties++;
         }
 
         var x = window.matchMedia("(max-width: 459px)");
@@ -94,7 +96,6 @@ async function startShiFuMi(displayTimer, nbDeParties) {
             document.querySelector('#left-fist').style.width='500px';
         }
 
-        console.log(`le console log de playerString est ${playerString}`)
         statsComputer = Math.round(100 * scoreComputer / nbPartiesPlayed);
         statsPlayer = Math.round(100 * scorePlayer / nbPartiesPlayed);
         writeOneStringHTML(`${statsComputer} %`, 'p.computer-stats');
