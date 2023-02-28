@@ -1,0 +1,544 @@
+@font-face {
+    font-family: 'ocr_a_extendedregular';
+    src: url('../text/ocraext-webfont.woff2') format('woff2'),
+        url('../text/ocraext-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'daydreamthin';
+    src: url('../text/daydream-webfont.woff2') format('woff2'),
+        url('../text/ocraext-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: unset;
+}
+
+img {
+    width: 20%;
+}
+
+body {
+    background-image: url(../img/Background-Shifumi.jpg);
+    background-position: center;
+    height: 100vh;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#background h1 {
+    font-family: 'Daydreamthin', sans-serif;
+    font-size: 100px;
+    color: #063c76;
+}
+
+.start-button {
+    font-family: 'ocr_a_extendedregular';
+    margin-bottom: 4%;
+    font-size: 60px;
+    background-color: #063c765f;
+    color: white;
+    border: none;
+    width: 450px;
+    border-radius: 40px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background-color: #063c76;
+}
+
+#rules {
+    text-align: center;
+    font-family: 'ocr_a_extendedregular';
+    ;
+    position: absolute;
+    padding: 3%;
+    font-size: x-large;
+    display: none;
+    width: 70%;
+    height: 550px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+#rules h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#rules p {
+    text-align: justify;
+}
+
+/* ------ Bouton qui permet d'afficher les règles */
+.rules-button {
+    font-size: medium;
+    font-family: 'ocr_a_extendedregular';
+    color: #063c76;
+    background-color: #063c765f;
+    border: none;
+    border-radius: 40px;
+    height: 40px;
+    width: 13%;
+    cursor: pointer;
+    color: white;
+}
+
+.rules-button:hover {
+    background-color: #063c76;
+}
+
+.close-button {
+    margin-top: 50px;
+    font-family: 'ocr_a_extendedregular';
+    font-size: 18px;
+    color: #063c76;
+    background-color: #063c7631;
+    border: none;
+    border-radius: 45px;
+    height: 40px;
+    width: 23%;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #063c76;
+    color: white;
+}
+
+/* ----------------------Nuages------------------- */
+.element-cloud {
+    padding-top: 30%;
+    position: relative;
+    transform: translateX(-25%);
+    width: 40%;
+    padding: 20px;
+}
+
+#cloud-1 {
+    animation: float 20s linear 0s infinite;
+}
+
+#cloud-2 {
+    animation: float 24s linear 2s infinite;
+}
+
+#cloud-3 {
+    animation: float 34s linear 6s infinite;
+}
+
+#cloud-4 {
+    animation: float 29s linear 3s infinite;
+}
+
+#cloud-6 {
+    animation: float 32s linear 9s infinite;
+}
+
+#cloud-7 {
+    animation: float 20s linear 4s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+/* ----------Montgolfière---------------------- */
+#hot-balloon {
+    display: flex;
+    width: 20%;
+    float: right;
+    padding-top: 5%;
+    transform: translatey(0px);
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+/* -------------------------Round---------------------------- */
+.round {
+    font-family: 'daydreamthin';
+    color: #0B6FDB;
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    margin-top: -15%;
+}
+
+#timer {
+    margin-top: 9%;
+    color: crimson;
+}
+
+/* ---------------------------Scores------------------------- */
+.scores {
+    display: flex;
+    font-family: 'daydreamthin';
+    color: #0B6FDB;
+    font-size: 50px;
+    margin-top: -15%;
+    margin-left: 20%;
+    margin-right: 20%;
+    /* position: absolute; */
+}
+
+#statistics {
+    font-family: 'Daydreamthin', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    font-size: 40px;
+    color: #063c76;
+}
+
+#right-score {
+    padding-left: 850px;
+}
+
+/* -----------------------Poings---------------------------- */
+.fist {
+    display: flex;
+    position: absolute;
+    margin-left: 5%;
+    margin-right: 5%;
+    z-index: 0;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+#right-fist {
+    text-align: right;
+}
+
+.fist img {
+    width: 30%;
+}
+
+/* ----------------Soleil------------------------ */
+#sun {
+    height: 50vh;
+}
+
+#sun img {
+    width: 10%;
+    top: 20px;
+    position: fixed;
+    margin-left: 60px;
+    animation: breathing 5s ease-out infinite normal;
+}
+
+@keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+@keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    25% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    60% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+/* -----------------Choix pierre feuille---------- */
+.selector {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff88;
+    border-radius: 70px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.selector img {
+    margin: auto;
+    display: flex;
+    width: 20%;
+    animation: breathing 5s ease-out infinite normal;
+}
+
+/* @media screen and (min-width: 996px) and (max-width: 1300px) {
+    #background h1 {
+        font-size: 80px;
+    }
+    .start-button {
+        width: 350px;
+        font-size: 50px;
+        margin-bottom: 10%;
+    }
+    .rules-button {
+        width: 20%;
+        height: 40px;
+    }
+    #rules {
+        height: 420px;
+        width: 80%;
+        font-size: large;
+    }
+    .close-button {
+        width: 40%;
+    }
+    .fist img {
+        width: 30%;
+    }
+    .selector {
+        width: 60%;
+        margin: auto;
+    }
+    .selector img {
+        width: 30%;
+    }
+} */
+/* @media screen and (min-width: 701px) and (max-width: 995px) {
+    #background h1 {
+        font-size: 80px;
+    }
+    .start-button {
+        width: 300px;
+        font-size: 50px;
+        margin-bottom: 10%;
+    }
+    .rules-button {
+        width: 30%;
+        height: 40px;
+    }
+    #rules {
+        height: 460px;
+        width: 90%;
+        font-size: large;
+    }
+    .close-button {
+        width: 40%;
+    }
+    .fist img {
+        width: 40%;
+    }
+    .selector {
+        width: 70%;
+        margin: auto;
+    }
+    .selector img {
+        width: 30%;
+    }
+}
+@media screen and (min-width: 460px) and (max-width: 700px) {
+    #background h1 {
+        font-size: 60px;
+    }
+    .start-button {
+        width: 300px;
+        font-size: 50px;
+        margin-bottom: 10%;
+    }
+    .rules-button {
+        width: 30%;
+        height: 40px;
+    }
+    #rules {
+        height: 500px;
+        width: 90%;
+        font-size: medium;
+    }
+    .close-button {
+        width: 40%;
+    }
+    .fist img {
+        width: 40%;
+    }
+    .round {
+        font-size: 40px;
+        position: absolute;
+        margin-top: -15%;
+    }
+    .selector img {
+        width: 40%;
+    }
+    .selector {
+        width: 90%;
+        margin: auto;
+    }
+} */
+@media screen and (min-width: 320px) and (max-width: 459px) {
+    #background h1 {
+        font-size: 45px;
+    }
+
+    .start-button {
+        width: 300px;
+        height: 60px;
+        font-size: 45px;
+        margin-top: 30%;
+        margin-bottom: 20%;
+    }
+
+    .rules-button {
+        width: 50%;
+        height: 50px;
+    }
+
+    #rules {
+        font-size: x-small;
+        width: 95%;
+        height: 600px;
+        font-size: 15px;
+    }
+
+    .close-button {
+        width: 70%;
+        height: 50px;
+    }
+
+    #sun img {
+        width: 25%;
+    }
+
+    .element-cloud {
+        display: none;
+    }
+
+    .fist img {
+        margin-top: 80%;
+        width: 70%;
+    }
+
+    .round {
+        margin-top: 30%;
+        font-size: 40px;
+    }
+
+    .scores {
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+        margin-top: 1%;
+    }
+
+    #right-score {
+        padding-left: 0px;
+    }
+
+    .selector img {
+        width: 40%;
+    }
+
+    .selector {
+        width: 90%;
+        margin: auto;
+    }
+
+    body {
+        background-image: url(../img/Background-ciel-bleu-version-mobile.jpg);
+        background-position: center;
+        height: 100vh;
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+}
+
+/* @media screen and  (max-width: 319px) {
+    #background h1 {
+        font-size: 25px;
+    }
+    .start-button {
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+        margin-top: 30%;
+        margin-bottom: 20%;
+    }
+    .rules-button {
+        width: 50%;
+        height: 40px;
+    }
+    #rules {
+        font-size: small;
+        width: 95%;
+        height: 350px;
+        font-size: 10px;
+    }
+    .close-button {
+        width: 70%;
+        height: 50px;
+    }
+    .selector {
+        width: 80%;
+        margin: auto;
+    }
+    .round {
+        margin: auto;
+        margin-left: 0;
+    }
+} */

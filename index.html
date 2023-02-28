@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shi fu mi game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!------------------Nuages --------------------->
+    <div class="element-cloud">
+        <div id="cloud-1">
+            <img src="assets/img/Nuage 1.png" alt="Illustration nuage">
+        </div>
+        <div id="cloud-2">
+            <img src="assets/img/Nuage 2.png" alt="Illustration nuage">
+        </div>
+        <div id="cloud-3">
+            <img src="assets/img/Nuage 3.png" alt="Illustration nuage">
+        </div>
+        <div id="cloud-4">
+            <img src="assets/img/Nuage 4.png" alt="Illustration nuage">
+        </div>
+        <div id="cloud-6">
+            <img src="assets/img/Nuage 6.png" alt="Illustration nuage">
+        </div>
+        <div id="cloud-7">
+            <img src="assets/img/Nuage 7.png" alt="Illustration nuage">
+        </div>
+    </div>
+    <div id="background">
+        <h1>SHI FU MI</h1>
+        <a href="jeu.html"><button class="start-button">START</button></a>
+        <!-- section Modale pour afficher les règles du jeu -->
+        <button onclick="displayRules()" class="rules-button" id="open-modale">Règles du jeu</button>
+        <div id="rules">
+            <h2>Comment jouer à SHIFUMI ?</h2>
+            <p>Les règles du jeu sont vraiment très simples et vous n’avez besoin de rien pour jouer, si ce n’est que
+                vos mains. Voici les règles de la version classique du shifumi qui se joue à 2 joueurs : A l’aide des
+                icônes mains vous aurez la possibilité de choisir entre 3 signes : la pierre, le papier ou les ciseaux.
+            </p>
+            <p>Les 2 joueurs doivent choisir un signe avant le décompte.
+                Une fois que les deux joueurs ont dévoilés leurs signes voici comment est déterminé le gagnant :
+                La pierre casse les ciseaux, la pierre gagne contre les ciseaux.
+                Les ciseaux coupent le papier, les ciseaux gagnent contre le papier.
+                Le papier recouvre la pierre, le papier gagne contre la pierre.
+                En cas d’égalité vous rejouez jusqu’à ce qu’il y ait un gagnant.</p>
+            <button onclick="hideRules()" class="close-button" id="close-modale">Fermer les règles</button>
+        </div>
+    </div>
+    <!-------------------- Montgolfière ----------------->
+    <div id="hot-balloon">
+        <img src="assets/img/montgolfiere.png" alt="illustration montgolfiere">
+    </div>
+
+    <!------------------------ Soleil ------------------->
+    <div id="sun">
+        <img src="assets/img/Soleil.png" alt="Illustration d'un Soleil">
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
