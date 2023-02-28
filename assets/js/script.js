@@ -107,10 +107,10 @@ async function startShiFuMi(displayTimer, nbDeParties) {
         console.log('LOOP');
         replaceFist('left', computerString);
         replaceFist('right', playerString);
-        await wait(2000);
+        await wait(3000);
         nbDeParties--;
     }
-    await wait(2000);
+    await wait(1000);
 
     gameOver();
     console.log("Loop execution finished!)");
